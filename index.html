@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Revolut-inspired Web App</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Revolut Clone</h1>
+    <nav>
+      <button id="btn-exchange">Exchange</button>
+      <button id="btn-send">Send Money</button>
+      <button id="btn-cards">Cards</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="balance">
+      <h2>Account Balance</h2>
+      <p id="balance-amount">$5,000.00</p>
+    </section>
+
+    <section class="actions">
+      <button onclick="sendMoney()">Send Money</button>
+      <button onclick="openExchange()">Currency Exchange</button>
+    </section>
+
+    <section class="cards">
+      <h2>Your Cards</h2>
+      <div class="card">Virtual Card: **** 1234</div>
+      <div class="card">Debit Card: **** 5678</div>
+    </section>
+
+    <section id="exchange-section" class="hidden">
+      <h2>Currency Exchange</h2>
+      <input type="number" id="amount" placeholder="Amount" />
+      <select id="currency-from">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="GBP">GBP</option>
+      </select>
+      <select id="currency-to">
+        <option value="EUR">EUR</option>
+        <option value="USD">USD</option>
+        <option value="GBP">GBP</option>
+      </select>
+      <button onclick="exchangeCurrency()">Convert</button>
+      <p id="exchange-result"></p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
